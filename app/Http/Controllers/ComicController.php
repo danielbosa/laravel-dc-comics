@@ -88,7 +88,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $comic = Comic::find($comic->id);
+        //$comic = Comic::find($comic->id);
         $form_data = $request->all();
 
         //*PRIMO METODO
@@ -101,8 +101,8 @@ class ComicController extends Controller
             // $comic->update();
 
         //*SECONDO METODO
-        //^devo avere il fillable nel model
-        $comic->update($form_data);
+            //^devo avere il fillable nel model
+            $comic->update($form_data);
         //reindirizzo alla show del comic modificato
         return redirect()->route('comics.show', $comic->id);
     }
