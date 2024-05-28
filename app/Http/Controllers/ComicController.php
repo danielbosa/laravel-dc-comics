@@ -33,12 +33,13 @@ class ComicController extends Controller
         $form_data = $request->all();
         //dd($form_data);
 
-        //PRIMO MODO
+        //*PRIMO MODO
+        //^--> ma devo avere i campi in fillable nel Model
         // $new_comic = new Comic();
         // $new_comic->fill($form_data);
         // $new_comic->save();
 
-        //SECONDO MODO
+        //*SECONDO MODO
         // $new_comic = new Comic();
         // $new_comic->title = $form_data['title'];
         // $new_comic->description = $form_data['description'];
@@ -48,9 +49,11 @@ class ComicController extends Controller
         // $new_comic->image = $form_data['image'];
         // $new_comic->save();
 
-        //TERZO MODO
+        //*TERZO MODO
+        //^--> ma devo avere i campi in fillable nel Model
         $new_comic = Comic::create($form_data);
 
+        //reindirizzo da qualche parte
         return redirect()->route('comics.index');
         //return redirect()->route('comics.show', $new_comic->id);
     }
