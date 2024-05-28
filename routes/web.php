@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $comics = config('db.comics');
-    $headerOptions = config('db.headerOptions');
-    $footerMenu = config('db.footerMenu');
-    return view('home', compact('comics','headerOptions','footerMenu'));
-})->name('home');
+// Route::get('/', function () {
+//     $comics = config('db.comics');
+//     $headerOptions = config('db.headerOptions');
+//     $footerMenu = config('db.footerMenu');
+//     return view('home', compact('comics','headerOptions','footerMenu'));
+// })->name('home');
 
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-//********/
-// Route::get('/', function(){
-//     return view('home');
-// })->name('home');
+
+Route::get('/', function(){
+    return view('home');
+})->name('home');
+
+Route::resource('comics', ComicController::class);
 
