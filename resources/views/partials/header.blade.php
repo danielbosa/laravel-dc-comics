@@ -5,11 +5,11 @@
                 <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
             </div>
             <ul>
-                {{-- @foreach ( $headerOptions as $option)
+                @foreach ( $headerOptions as $option)
                     <li>
                         <a href="{{$option['link']}}">{{$option['name']}}</a>
                     </li>
-                @endforeach --}}
+                @endforeach
             </ul>
             <div class="db-input">
                 <input type="search" id="search" name="search" placeholder="Search">

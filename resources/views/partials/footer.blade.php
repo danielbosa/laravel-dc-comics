@@ -2,7 +2,7 @@
     <section class="db-footer-one">
         <div class="db-container">
             <div class="db-footer-links">
-                {{-- @foreach ( $footerMenu as $menuItem)
+                @foreach ( $footerMenu as $menuItem)
                 <div>
                     <h5>{{ $menuItem['title'] }}</h5>
                     <ul>
@@ -13,7 +13,7 @@
                         @endforeach
                     </ul>
                 </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>

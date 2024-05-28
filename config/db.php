@@ -112,13 +112,17 @@ return [
         ],
     ],
     'headerOptions' => [
+        // [
+        //     "name" => 'characters',
+        //     "link" => '/',
+        // ],
         [
-            "name" => 'characters',
-            "link" => '#',
+            "name" => 'home',
+            "link" => '/',
         ],
         [
             "name" => 'comics',
-            "link" => '#',
+            "link" => '/comics',
         ],
         [
             "name" => 'movies',
@@ -163,7 +167,7 @@ return [
                 ],
                 [
                     "text"=> "Comics",
-                    "url"=> "#",
+                    "url"=> "/comics",
                 ],
                 [
                     "text"=> "Movies",
@@ -184,6 +188,10 @@ return [
                 [
                     "text"=> "News",
                     "url"=> "#",
+                ],
+                [
+                    "text"=> "Add comic",
+                    "url"=> "/comics/create",
                 ]
             ]
         ],

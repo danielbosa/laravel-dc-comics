@@ -46,8 +46,8 @@
             </select>
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="db-btn">Add</button>
-            <button type="reset" class="db-btn db-btn-back">Back</button>
+            <button type="submit" class="db-btn">Save</button>
+            <button type="reset" class="db-btn db-btn-back">Leave</button>
         </div>
     </form>
 
