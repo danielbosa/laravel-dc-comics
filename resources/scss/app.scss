@@ -218,6 +218,9 @@ main{
         &.db-btn-2{
             padding: 5px 50px;
         }
+        &.db-btn-back{
+            background-color: $secondary;
+        }
     }
 
     .card{
@@ -240,12 +243,17 @@ main{
 }
 
 #create{
+    color: $light;
+
     div{
         width: 50%;
         margin: 0 auto;
         button{
             margin: 0 10px;
         }
+    }
+    label{
+        font-size: 1.3rem;
     }
     
 }

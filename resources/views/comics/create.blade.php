@@ -2,7 +2,7 @@
 @section('title', 'Add Comic')
 @section('content')
 <section class="container" id="create">
-    <h1>Add Comic</h1>
+    <h1 class="pt-3">Add Comic</h1>
 
     <form action="{{route('comics.store')}}" method="POST" class="pb-3">
         {{-- @csrf generates token for security reason --}}
@@ -10,7 +10,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title" required>
-            <div id="titleHelp" class="form-text">Enter the title</div>
+            {{-- <div id="titleHelp" class="form-text">Enter the title</div> --}}
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
@@ -40,8 +40,8 @@
             </select>
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Add</button>
-            <button type="reset" class="btn btn-danger">Back</button>
+            <button type="submit" class="db-btn">Add</button>
+            <button type="reset" class="db-btn db-btn-back">Back</button>
         </div>
     </form>
 
