@@ -17,10 +17,16 @@
                         <div class="card">
                             <div class="db-card-img-container">
                                 <img class="db-card-img" src="{{$comic->thumb}}" alt="">
+                                <a href="{{route('comics.show', $comic->id)}}" class="db-btn db-btn-1">Show</a>
                             </div>
                             <div class="db-card-title text-uppercase">{{$comic->title}}</div>
-                            <a href="{{route('comics.show', $comic->id)}}" class="db-btn db-btn-1">Show</a>
+                            {{-- <a href="{{route('comics.show', $comic->id)}}" class="db-btn db-btn-1">Show</a> --}}
                             <a href="{{route('comics.edit', $comic->id)}}" class="db-btn db-btn-1">Edit</a>
+                            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete" class="db-btn db-btn-1">
+                            </form>
                         </div> 
                     </div>
                 @endforeach

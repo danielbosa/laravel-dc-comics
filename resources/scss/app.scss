@@ -231,10 +231,30 @@ main{
         }
         .db-card-img-container{
             height: 250px;
+            position: relative;
+            a{
+                position: absolute;
+                z-index: 999;
+                top: 50%;
+                left: 25%;
+                display: none;
+                opacity: 75%;
+            }
+            &:hover a{
+                display: block;
+            }
         }
         --bs-card-bg: #00000000;
     }
     
+    .card>a.db-btn{
+        width: 50%;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        text-decoration: none;
+    }
+
     .db-card-img{
             width: 100%;
             height: 100%;
@@ -242,7 +262,8 @@ main{
         }
 }
 
-#create{
+#create,
+#edit{
     color: $light;
 
     div{
