@@ -10,6 +10,15 @@
 <main class="">
     <div class="db-container pb-4">
         <span class="db-btn db-btn-1">Current series</span>
+
+    {{-- !! TO BE FIXED !! --}}
+        @if(session()->has('message'))
+            <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+        @endif
+    {{-- !! TO BE FIXED !! --}}
+
         <div class="container py-4">
             <div class="row g-3">
                 @foreach ( $comics as $comic)
@@ -25,7 +34,7 @@
                             <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <input type="submit" value="Delete" class="db-btn db-btn-1">
+                                <input type="submit" value="Delete" class="db-btn db-btn-1 BtnToConfirm">
                             </form>
                         </div> 
                     </div>
@@ -34,7 +43,25 @@
         </div>
         <div class="text-center">
             <button class="db-btn db-btn-2">Load more</button>
-        </div>    
+        </div>
+        {{-- modal --}}
+        <div class="modal fade" id="indexModal" tabindex="-1" aria-labelledby="indexModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="indexModalLabel">ATTENTION: this action cannot be undone.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Would you like to continue?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary">Yes</button>
+                </div>
+                </div>
+            </div>
+        </div>  
     </div>
 </main>
 

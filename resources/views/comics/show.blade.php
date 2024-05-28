@@ -18,6 +18,7 @@
             <div>
                 Price: {{$comic->price}}
             </div>
+            {{-- Bottoni per modificare e cancellare --}}
         </div>
     </div>
 </section>

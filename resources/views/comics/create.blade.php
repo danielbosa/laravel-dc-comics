@@ -26,11 +26,11 @@
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
-            <input type="text" class="form-control" id="series"  name="series" required>
+            <input type="text" class="form-control" id="series"  name="series">
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale date</label>
-            <input type="date" class="form-control" id="sale_date"  name="sale_date" required>
+            <input type="date" class="form-control" id="sale_date"  name="sale_date">
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
