@@ -40,9 +40,11 @@ body{
     margin: 0;
     font-family: 'Open Sans Condensed';
     //'DC Fandom'
+    background-color: $darkest;
 }
 
 header{
+    background-color: $light;
     .db-container{
         @include db-container;
         height: 100px;
@@ -282,4 +284,16 @@ main{
 .modal-header h1,
 main .db-container div .modal-body{
     color: $dark;
+}
+
+#show .db-btn{
+    border-style: outset;
+    border-color: buttonborder;
+    text-decoration: none;
+}
+#show input{
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $accenture;
+    color: $light;
 }
