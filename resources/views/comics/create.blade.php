@@ -19,8 +19,8 @@
         {{-- @csrf generates token for security reason --}}
         @csrf
         <div class="mb-3">
-            <label for="title" class="form-label @error('title') is-invalid @enderror">Title</label>
-            <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" aria-describedby="titleHelp" name="title">
             {{-- <div id="titleHelp" class="form-text">Enter the title</div> --}}
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -28,27 +28,42 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="description" id="description" cols="30" rows="10" class="form-control @error('description') is-invalid @enderror"></textarea>
+            @error('description')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">Image</label>
-            <input type="text" class="form-control" id="thumb"  name="thumb">
+            <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb"  name="thumb">
+            @error('thumb')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price"  name="price">
+            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"  name="price">
+            @error('price')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
-            <input type="text" class="form-control" id="series"  name="series">
+            <input type="text" class="form-control @error('series') is-invalid @enderror" id="series"  name="series">
+            @error('series')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale date</label>
-            <input type="date" class="form-control" id="sale_date"  name="sale_date">
+            <input type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date"  name="sale_date">
+            @error('sale_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <select class="form-control" id="type"  name="type">
+            <select class="form-control @error('type') is-invalid @enderror" id="type"  name="type">
             <option value="comic book">Comic Book</option>
             <option value="graphic novel">Graphic novel</option>
             </select>
