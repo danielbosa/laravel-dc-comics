@@ -35,7 +35,13 @@ class StoreComicRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'title.required'=>'Il titolo è obbligatorio',
+            'description.required'=>'La descrizione è obbligatoria',
+            'thumb.url'=>'Inserisci un link valido',
+            'price.numeric'=>'Inserisci un valore numerico',
+            'series.required'=>'Il nome della serie è obbligatorio',
+            'sale_date.required'=>'La data di vendita è obbligatoria',
+            'type.required'=>'Il tipo è obbligatorio',
         ];
     }
 }
