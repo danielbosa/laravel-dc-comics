@@ -222,6 +222,10 @@ main{
         }
         &.db-btn-back{
             background-color: $secondary;
+            a{
+                text-decoration: none;
+                color: $light;
+            }
         }
     }
 

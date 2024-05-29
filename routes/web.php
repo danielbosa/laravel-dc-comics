@@ -32,4 +32,3 @@ Route::get('/', function(){
 })->name('home');
 
 Route::resource('comics', ComicController::class);
-

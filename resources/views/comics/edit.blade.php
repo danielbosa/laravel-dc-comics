@@ -65,7 +65,10 @@
         </div>
         <div class="d-flex justify-content-center">
             <button type="submit" class="db-btn">Save</button>
-            <button type="reset" class="db-btn db-btn-back">Leave</button>
+            {{-- <button type="reset" class="db-btn db-btn-back">Leave</button> --}}
+            <button type="reset" class="db-btn db-btn-back">
+                <a href="{{route('comics.show', $comic->id)}}">Leave</a>
+            </button>
         </div>
     </form>
 
