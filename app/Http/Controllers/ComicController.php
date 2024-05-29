@@ -35,10 +35,11 @@ class ComicController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreComicRequest $request)
+    //uso la classe StoreComicRequest per validare i dati del form
     {
         //salvataggio e redirezione dell'utente
 
-        //recupero dati dal form e me li salvo in una variabile
+        //recupero dati dal form CON VALIDAZIONE e me li salvo in una variabile 
         $form_data = $request->validated();
         //dd($form_data);
 

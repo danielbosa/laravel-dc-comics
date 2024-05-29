@@ -37,6 +37,7 @@ class StoreComicRequest extends FormRequest
         return [
             'title.required'=>'Il titolo è obbligatorio',
             'description.required'=>'La descrizione è obbligatoria',
+            'title.max'=>'Il titolo è troppo lungo',
             'thumb.url'=>'Inserisci un link valido',
             'price.numeric'=>'Inserisci un valore numerico',
             'series.required'=>'Il nome della serie è obbligatorio',

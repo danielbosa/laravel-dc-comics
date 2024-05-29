@@ -4,13 +4,27 @@
 <section class="container" id="create">
     <h1 class="pt-3">Add Comic</h1>
 
+    {{-- per mostrare messaggi di errori --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{route('comics.store')}}" method="POST" class="pb-3">
         {{-- @csrf generates token for security reason --}}
         @csrf
         <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title" required>
+            <label for="title" class="form-label @error('title') is-invalid @enderror">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title">
             {{-- <div id="titleHelp" class="form-text">Enter the title</div> --}}
+            @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
@@ -22,7 +36,7 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price"  name="price" required>
+            <input type="text" class="form-control" id="price"  name="price">
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
@@ -34,7 +48,7 @@
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <select class="form-control" id="type"  name="type" required>
+            <select class="form-control" id="type"  name="type">
             <option value="comic book">Comic Book</option>
             <option value="graphic novel">Graphic novel</option>
             </select>
